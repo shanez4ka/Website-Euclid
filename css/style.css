@@ -611,11 +611,6 @@ h1 {
   border-bottom: 1px solid var(--colorGrey);
 }
 
-.questions__details {
-  padding: 30px 0;
-  border-top: 1px solid var(--colorGrey);
-}
-
 .questions__summary::-webkit-details-marker { display: none; }
 
 .questions__summary {
@@ -625,11 +620,13 @@ h1 {
   align-items: center;
   cursor: pointer;
   position: relative;
+  padding: 30px 0;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
   color: var(--colorBlack);
-  transition: color .2s ease;
+  border-top: 1px solid var(--colorGrey);
+  transition: color .2s ease, border .2s ease;
 }
 
 .questions__chev {
@@ -660,7 +657,7 @@ h1 {
 }
 
 .questions__content {
-  margin: 20px 0 10px 0;
+  margin: 0 0 40px 0;
   font-size: 16px;
   line-height: 32px;
   color: var(--colorBlack);
@@ -672,10 +669,10 @@ h1 {
 
 @keyframes sweep {
   from {
-    opacity: 0; margin-top: 0px; margin-bottom: 0px;
+    opacity: 0; margin-bottom: 0px;
   }
   to {
-    opacity: 1; margin-top: 20px; margin-bottom: 10px;
+    opacity: 1; margin-bottom: 40px;
   }
 }
 
