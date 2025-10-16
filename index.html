@@ -6,43 +6,45 @@
   <title>Евклид - Проектные Системы</title>
   <link rel="shortcut icon" href="img/minilogo.svg">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header class="header">
     <div class="container header__container">
       <div class="header__menu">
-          <input type="checkbox" id="header__burger-checkbox" class="header__burger-checkbox">
-          <label for="header__burger-checkbox" class="header__burger"></label>
-          <ul class="header__menu-list">
-              <li class="header__menu-item">
-                <a href="#" class="header__menu-link">
-                  О нас
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__menu-link">
-                  Проекты
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__menu-link">
-                  Этапы
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__menu-link">
-                  Отзывы
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#" class="header__menu-link">
-                  Контакты
-                </a>
-              </li>
-          </ul>
+        <input type="checkbox" id="header__burger-checkbox" class="header__burger-checkbox">
+        <label aria-label="Боковое меню" for="header__burger-checkbox" class="header__burger"></label>
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              О нас
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              Проекты
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              Этапы
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              Отзывы
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              Контакты
+            </a>
+          </li>
+        </ul>
       </div>
-      <a href="" class="header__logo">
+      <a aria-label="Логотип Евклид" href="" class="header__logo">
         <img src="img/logo.svg" alt="" class="header__logo-img">
       </a>
       <div class="header__links-container">
@@ -73,7 +75,7 @@
             </a>
           </li>
         </ul>
-        <label for="find-toggle" class="header__find-button">
+        <label aria-label="Открыть поиск" for="find-toggle" class="header__find-button">
           <svg class="header__icon-find" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
           <path d="M10.9648 1C16.4852 1 20.9306 5.39189 20.9307 10.7725C20.9307 16.1531 16.4852 20.5449 10.9648 20.5449C5.44461 20.5448 1 16.153 1 10.7725C1.00008 5.39199 5.44466 1.00016 10.9648 1Z" stroke="black" stroke-width="2"/>
@@ -88,7 +90,7 @@
             <path d="M10.9648 1C16.4852 1 20.9306 5.39189 20.9307 10.7725C20.9307 16.1531 16.4852 20.5449 10.9648 20.5449C5.44461 20.5448 1 16.153 1 10.7725C1.00008 5.39199 5.44466 1.00016 10.9648 1Z" stroke="#FF9900" stroke-width="2"/>
             </svg>
           </a>
-          <label for="find-toggle" class="header__input-closed-find-button">
+          <label aria-label="Очистить и закрыть поиск" for="find-toggle" class="header__input-closed-find-button">
             <svg class="header__icon-closed-find" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
             <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
@@ -101,10 +103,7 @@
   </header>
 
   <section class="hero">
-    <input type="radio" id="take-first-img" name="take-img" value="option-img" checked>
-    <input type="radio" id="take-second-img" name="take-img" value="option-img">
-    <input type="radio" id="take-third-img" name="take-img" value="option-img">
-    <div class="container hero-container">
+    <div class="hero-container swiper">
       <div class="hero__info">
         <strong class="hero__title">
           Проектные решения любой сложности
@@ -116,11 +115,18 @@
       <button class="btn hero__btn">
         Заказать расчёт
       </button>
-      <div class="hero__selector">
-        <label for="take-first-img" class="hero__select"></label>
-        <label for="take-second-img" class="hero__select"></label>
-        <label for="take-third-img" class="hero__select"></label>
+      <div class="swiper-wrapper hero__swiper-wrapper">
+        <div class="swiper-slide hero__swiper-slide">
+          <img src="img/hero-pic-1.jpg" alt="Изображение 1" class="hero__image">
+        </div>
+        <div class="swiper-slide hero__swiper-slide">
+          <img src="img/hero-pic-2.jpg" alt="Изображение 2" class="hero__image">
+        </div>
+        <div class="swiper-slide hero__swiper-slide">
+          <img src="img/hero-pic-3.jpg" alt="Изображение 3" class="hero__image">
+        </div>
       </div>
+      <div class="swiper-pagination hero__swiper-pagination"></div>
     </div>
   </section>
 
@@ -229,7 +235,11 @@
             <span class="questions__question">
               Из чего формируется конечная стоимость проекта?
             </span>
-            <span class="questions__chev"></span>
+            <span class="questions__chev">
+              <svg class="questions__chev-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0571 15.0571L15.0571 -1.31634e-06L15.9429 -1.31634e-06L15.9429 15.0571L23.8835 15.0571L31 15.0571L31 15.9429L15.9429 15.9429L15.9429 31L15.0571 31L15.0571 15.9429L2.42093e-06 15.9429L2.49836e-06 15.0571L15.0571 15.0571Z" fill="black"/>
+              </svg>
+            </span>
           </summary>
           <p class="questions__content">
             Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны какпретенденты на роль ключевых факторов.
@@ -242,7 +252,11 @@
             <span class="questions__question">
               У меня есть свой проект. Сможем ли мы его доработать / реализовать?
             </span>
-            <span class="questions__chev"></span>
+            <span class="questions__chev">
+              <svg class="questions__chev-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0571 15.0571L15.0571 -1.31634e-06L15.9429 -1.31634e-06L15.9429 15.0571L23.8835 15.0571L31 15.0571L31 15.9429L15.9429 15.9429L15.9429 31L15.0571 31L15.0571 15.9429L2.42093e-06 15.9429L2.49836e-06 15.0571L15.0571 15.0571Z" fill="black"/>
+              </svg>
+            </span>
           </summary>
           <p class="questions__content">
             Безусловно! Мы открыты к работе с уже существующими проектами — будь то концепт, черновой прототип или реализованный продукт, требующий обновления. Мы проведём аудит текущего состояния, определим точки роста и предложим пути оптимизации. Наша цель — не просто доработать идею, а вывести её на новый уровень, сохранив её уникальность и усилив результат.
@@ -255,7 +269,11 @@
             <span class="questions__question">
               Я выбираю между разными компаниями. В чём ваше отличие?
             </span>
-            <span class="questions__chev"></span>
+            <span class="questions__chev">
+              <svg class="questions__chev-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0571 15.0571L15.0571 -1.31634e-06L15.9429 -1.31634e-06L15.9429 15.0571L23.8835 15.0571L31 15.0571L31 15.9429L15.9429 15.9429L15.9429 31L15.0571 31L15.0571 15.9429L2.42093e-06 15.9429L2.49836e-06 15.0571L15.0571 15.0571Z" fill="black"/>
+              </svg>
+            </span>
           </summary>
           <p class="questions__content">
             Главное наше отличие — это комплексный подход и личная вовлечённость в каждый проект. Мы не просто исполняем задачу по шаблону, а создаём индивидуальное решение, где каждая деталь продумана с точки зрения эстетики, функциональности и практической ценности.
@@ -267,7 +285,11 @@
             <span class="questions__question">
               Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
             </span>
-            <span class="questions__chev"></span>
+            <span class="questions__chev">
+              <svg class="questions__chev-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0571 15.0571L15.0571 -1.31634e-06L15.9429 -1.31634e-06L15.9429 15.0571L23.8835 15.0571L31 15.0571L31 15.9429L15.9429 15.9429L15.9429 31L15.0571 31L15.0571 15.9429L2.42093e-06 15.9429L2.49836e-06 15.0571L15.0571 15.0571Z" fill="black"/>
+              </svg>
+            </span>
           </summary>
           <p class="questions__content">
             Да, конечно. Мы берём на себя не только реализацию проекта, но и все сопутствующие процессы: взаимодействие с подрядчиками, согласования, контроль сроков и качества исполнения.
@@ -280,7 +302,11 @@
             <span class="questions__question">
               Могу ли я вернуть деньги на каком-либо из этапов работ?
             </span>
-            <span class="questions__chev"></span>
+            <span class="questions__chev">
+              <svg class="questions__chev-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0571 15.0571L15.0571 -1.31634e-06L15.9429 -1.31634e-06L15.9429 15.0571L23.8835 15.0571L31 15.0571L31 15.9429L15.9429 15.9429L15.9429 31L15.0571 31L15.0571 15.9429L2.42093e-06 15.9429L2.49836e-06 15.0571L15.0571 15.0571Z" fill="black"/>
+              </svg>
+            </span>
           </summary>
           <p class="questions__content">
             Мы стремимся к полной прозрачности финансовых отношений и фиксируем все условия сотрудничества в договоре. В нём подробно прописаны этапы, сроки, результаты и возможные условия возврата средств.
@@ -371,6 +397,7 @@
       </p>
     </div>
   </footer>
+  <script src="js/swiper.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
